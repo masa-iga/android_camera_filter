@@ -80,6 +80,7 @@ public final class GLES20Utils {
             GLES20.glDeleteShader(shader);
             shader = INVALID;
         }
+
         return shader;
     }
 
