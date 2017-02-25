@@ -36,8 +36,8 @@ public final class GLES20Utils {
         if (vertexShader == INVALID) {
             return INVALID;
         }
-        final int pixcelShader = loadShader(GLES20.GL_FRAGMENT_SHADER, fragmentSource);
-        if (pixcelShader == INVALID) {
+        final int pixcelShader1 = loadShader(GLES20.GL_FRAGMENT_SHADER, fragmentSource);
+        if (pixcelShader1 == INVALID) {
             return INVALID;
         }
 
@@ -48,8 +48,10 @@ public final class GLES20Utils {
         }
         GLES20.glAttachShader(program, vertexShader);
         checkGlError("glAttachShader");
-        GLES20.glAttachShader(program, pixcelShader);
+        GLES20.glAttachShader(program, pixcelShader1);
         checkGlError("glAttachShader");
+//        GLES20.glAttachShader(program, pixcelShader2);
+//        checkGlError("glAttachShader");
 
         GLES20.glLinkProgram(program);
         final int[] linkStatus = new int[1];
