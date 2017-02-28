@@ -40,11 +40,15 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         mGLSurfaceView0.onResume();
+        mGLSurfaceView1.onResume();
+        mGLSurfaceView2.onResume();
     }
 
     @Override
     public void onPause() {
         super.onPause();
         mGLSurfaceView0.onPause();
+        mGLSurfaceView1.onPause();
+        mGLSurfaceView2.onPause();
     }
 }
